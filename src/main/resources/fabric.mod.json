@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "kofi-table",
+  "version": "${version}",
+  "name": "Kofi Table",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/kofi-table/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "amymialee.kofitable.KofiTableClient"
+    ],
+    "main": [
+      "amymialee.kofitable.KofiTable"
+    ]
+  },
+  "mixins": [
+    "kofi-table.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.8",
+    "fabric": "*",
+    "minecraft": "1.19"
+  }
+}
