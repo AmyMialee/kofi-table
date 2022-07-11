@@ -1,0 +1,19 @@
+{
+	"variants": {
+		"facing=east": {
+			"model": "kofitable:block/kofi_table",
+			"y": 90
+		},
+		"facing=north": {
+			"model": "kofitable:block/kofi_table"
+		},
+		"facing=south": {
+			"model": "kofitable:block/kofi_table",
+			"y": 180
+		},
+		"facing=west": {
+			"model": "kofitable:block/kofi_table",
+			"y": 270
+		}
+	}
+}

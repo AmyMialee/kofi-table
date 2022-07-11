@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C ",
+    "SSS",
+    "L L"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:flower_pot"
+    },
+    "S": {
+      "item": "minecraft:dark_oak_slab"
+    },
+    "L": {
+      "item": "minecraft:dark_oak_log"
+    }
+  },
+  "result": {
+    "item": "kofitable:kofi_table"
+  }
+}
