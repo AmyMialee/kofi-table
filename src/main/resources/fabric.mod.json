@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "kofi-table",
+  "id": "kofitable",
   "version": "${version}",
   "name": "Kofi Table",
   "description": "",
@@ -21,8 +21,6 @@
     "kofi-table.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.14.8",
-    "fabric": "*",
-    "minecraft": "1.19"
+    "fabric": "*"
   }
 }

@@ -21,10 +21,6 @@ public class SupporterStickItem extends Item {
         } else {
             user.sendMessage(Text.of("NOT SUPPORTER!"), true);
         }
-        if (!world.isClient()) {
-            System.out.println(KofiTable.CONTRIBUTORS);
-            user.sendMessage(Text.of(KofiTable.CONTRIBUTORS.toString()), false);
-        }
         return super.use(world, user, hand);
     }
 }

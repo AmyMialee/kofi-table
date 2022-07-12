@@ -54,4 +54,39 @@ public class Supporter {
         }
         return false;
     }
+
+    public String getString(String key) {
+        if (has(key) && get(key) instanceof String string) {
+            return string;
+        }
+        return "";
+    }
+
+    public <T> boolean hasClass(String key, Class<T> clazz) {
+        return has(key) && clazz.isInstance(get(key));
+    }
+
+    public boolean hasInt(String key) {
+        return has(key) && get(key) instanceof Integer;
+    }
+
+    public boolean hasLong(String key) {
+        return has(key) && get(key) instanceof Long;
+    }
+
+    public boolean hasFloat(String key) {
+        return has(key) && get(key) instanceof Float;
+    }
+
+    public boolean hasDouble(String key) {
+        return has(key) && get(key) instanceof Double;
+    }
+
+    public boolean hasBoolean(String key) {
+        return has(key) && get(key) instanceof Boolean;
+    }
+
+    public boolean hasString(String key) {
+        return has(key) && get(key) instanceof String;
+    }
 }

@@ -1,10 +1,16 @@
 plugins {
     id 'fabric-loom' version '0.12-SNAPSHOT'
     id 'maven-publish'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
+apply plugin: 'com.github.johnrengelman.shadow'
 
 version = project.mod_version
 group = project.maven_group
+
+configurations {
+    shadowCommon
+}
 
 repositories {}
 
@@ -14,7 +20,26 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    implementation 'com.electronwill.night-config:toml:3.6.5'
+
+    compileOnly(shadowCommon('com.electronwill.night-config:toml:3.6.5'))
+
+    testCompileOnly 'com.electronwill.night-config:toml:3.6.5'
+}
+
+
+shadowJar {
+    relocate 'com.electronwill.nightconfig', "at.petrak.relocated.nightconfig"
+
+    archiveClassifier = 'shadow'
+    configurations = [project.configurations.shadowCommon]
+}
+
+remapJar {
+    dependsOn(shadowJar)
+    inputFile.set(shadowJar.archiveFile)
+    archiveClassifier = ''
+
+    from rootProject.file("LICENSE.md")
 }
 
 processResources {

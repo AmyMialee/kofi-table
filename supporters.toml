@@ -1,4 +1,21 @@
 # AmyMialee
 ["2793cdc6-7710-4e7e-9d81-cf918e067729"]
 "peculiarpieces:glider" = "vampire"
+"peculiarpieces:anyglider" = true
 "kofitable:supporter" = true
+
+# petra_the_kat
+["a2ce9382-2518-4752-87b2-c6a5c97f173e"]
+"peculiarpieces:glider" = "gamma"
+
+# will_bl
+["9b035372-0d8d-4513-8bd5-9808d7f4a9b3"]
+"peculiarpieces:glider" = "vampire"
+
+# MoriyaShiine
+["63a8c63b-9179-4427-849a-55212e6008bf"]
+"peculiarpieces:glider" = "moriya"
+
+# doctor4t
+["1b44461a-f605-4b29-a7a9-04e649d1981c"]
+"peculiarpieces:glider" = "rat"
