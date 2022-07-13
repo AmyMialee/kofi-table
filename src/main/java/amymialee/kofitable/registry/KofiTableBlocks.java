@@ -29,7 +29,7 @@ public class KofiTableBlocks {
 
     private static Block registerBlock(String name, BlockItem block) {
         Registry.register(Registry.BLOCK, KofiTable.id(name), block.getBlock());
-        KofiTableItems.registerItem(name, KofiTableItems.MOD_ITEMS, block);
+        KofiTableItems.registerItem(name, block);
         return block.getBlock();
     }
 

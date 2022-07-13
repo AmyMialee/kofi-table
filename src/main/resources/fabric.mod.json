@@ -3,11 +3,16 @@
   "id": "kofitable",
   "version": "${version}",
   "name": "Kofi Table",
-  "description": "",
-  "authors": [],
-  "contact": {},
+  "description": "A mod to help add supporter bonuses to mods!",
+  "authors": [
+    "AmyMialee"
+  ],
+  "contact": {
+    "homepage": "https://github.com/AmyMialeeMods/kofi-table",
+    "issues": "https://github.com/AmyMialeeMods/kofi-table/issues"
+  },
   "license": "All-Rights-Reserved",
-  "icon": "assets/kofi-table/icon.png",
+  "icon": "assets/kofitable/icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [
@@ -22,5 +27,12 @@
   ],
   "depends": {
     "fabric": "*"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "http://discord.amymialee.xyz"
+      }
+    }
   }
 }

@@ -25,7 +25,7 @@ public class KofiTable implements ModInitializer {
     public static final String MOD_ID = "kofitable";
     public static final Random RANDOM = new Random();
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-    public static final ItemGroup KOFI_GROUP = FabricItemGroupBuilder.create(id("kofitable_group")).icon(() -> KofiTableBlocks.KOFI_TABLE.asItem().getDefaultStack()).build();
+    public static final ItemGroup KOFI_GROUP = FabricItemGroupBuilder.create(id("kofitable_group")).icon(KofiTableItems::getItemGroupStack).build();
 
     public static final String CONTRIBUTOR_URL = "https://raw.githubusercontent.com/AmyMialee/kofi-table/main/supporters.toml";
     public static final Map<UUID, SupporterKofiTable> CONTRIBUTORS = initContributors(MOD_ID, SupporterKofiTable.class, CONTRIBUTOR_URL);

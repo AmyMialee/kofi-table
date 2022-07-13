@@ -20,9 +20,7 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-
-    compileOnly(shadowCommon('com.electronwill.night-config:toml:3.6.5'))
-
+    implementation(shadowCommon('com.electronwill.night-config:toml:3.6.5'))
     testCompileOnly 'com.electronwill.night-config:toml:3.6.5'
 }
 
@@ -79,5 +77,14 @@ publishing {
             from components.java
         }
     }
-    repositories {}
+    repositories {
+        maven {
+            name = "willBlRepositoryReleases"
+            url = "https://maven.willbl.dev/releases"
+            credentials(PasswordCredentials)
+            authentication {
+                basic(BasicAuthentication)
+            }
+        }
+    }
 }

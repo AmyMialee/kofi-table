@@ -1,12 +1,12 @@
 {
-	"parent": "minecraft:block/cube_all",
+	"parent": "block/cube",
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "block/dark_oak_log",
 		"1": "block/dark_oak_planks",
 		"2": "block/white_concrete",
 		"3": "kofitable:block/coffee",
-		"4": "mob_effect/regeneration",
+		"4": "kofitable:block/heart",
 		"particle": "block/dark_oak_log"
 	},
 	"elements": [
