@@ -1,6 +1,6 @@
 # Ko-fi Table
-Ko-fi Table is a small library mod which adds easy ways to detect players who have supported your mods.
-This comes in the form of adding a simple way to read TOML files from online, allowing you to create lists of supporters and give them bonuses in game.
+Ko-fi Table is a small library mod which adds easy ways to detect players who have supported your mods.  
+This comes in the form of adding a simple way to read TOML files from online, allowing you to create lists of supporters and give them bonuses in game.  
 A simple example can be found within this mod, with the Supporter Stick, which tells you if a player is supporting this mod.
 
 <img src="https://github.com/AmyMialeeMods/kofi-table/raw/main/assets/table.png">
