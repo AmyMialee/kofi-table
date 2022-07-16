@@ -20,3 +20,8 @@
 ["1b44461a-f605-4b29-a7a9-04e649d1981c"]
 "peculiarpieces:glider" = "rat"
 
+# Techy2001
+["da2d8488-8d16-409a-b25e-a5d5634b3324"]
+"peculiarpieces:glider" = "classic"
+"peculiarpieces:anyglider" = true
+"kofitable:supporter" = true
