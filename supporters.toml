@@ -1,6 +1,6 @@
 # AmyMialee
 ["2793cdc6-7710-4e7e-9d81-cf918e067729"]
-"peculiarpieces:glider" = "vampire"
+"peculiarpieces:glider" = "mystery"
 "peculiarpieces:anyglider" = true
 "kofitable:supporter" = true
 
@@ -23,5 +23,19 @@
 # Techy2001
 ["da2d8488-8d16-409a-b25e-a5d5634b3324"]
 "peculiarpieces:glider" = "classic"
-"peculiarpieces:anyglider" = true
-"kofitable:supporter" = true
+
+# Vazkii
+["8c826f34-113b-4238-a173-44639c53b6e6"]
+"peculiarpieces:glider" = "tater"
+
+# Partonetrain
+["23a6dcbe-b222-4ddc-815b-9ebff5076530"]
+"peculiarpieces:glider" = "tater"
+
+# LemmaEOF
+["3f5150ea-fade-4233-ad40-719e207154e9"]
+"peculiarpieces:glider" = "pineapple"
+
+# gdude2002
+["1a07ce68-7eba-4609-909a-d6731a090138"]
+"peculiarpieces:glider" = "pineapple"
