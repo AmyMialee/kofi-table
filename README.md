@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-	modImplementation "amymialee:kofi-table:1.0.2+1.19"
+	modImplementation "amymialee:kofi-table:1.0.3+1.19.x"
 }
 ```
 
