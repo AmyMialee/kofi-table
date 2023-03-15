@@ -9,8 +9,12 @@ import com.electronwill.nightconfig.core.UnmodifiableCommentedConfig;
 import com.electronwill.nightconfig.toml.TomlParser;
 import it.unimi.dsi.fastutil.objects.Object2ObjectMaps;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,7 +29,13 @@ public class KofiTable implements ModInitializer {
     public static final String MOD_ID = "kofitable";
     public static final Random RANDOM = new Random();
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-    public static final ItemGroup KOFI_GROUP = FabricItemGroupBuilder.create(id("kofitable_group")).icon(KofiTableItems::getItemGroupStack).build();
+    public static final ItemGroup KOFI_GROUP = FabricItemGroup.builder(id("kofitable_group"))
+            .icon(KofiTableItems::getItemGroupStack)
+            .entries((features, entries, opEnabled) -> entries.addAll(Registries.ITEM.streamEntries()
+                    .filter(e -> e.getKey().filter(k -> k.getValue().getNamespace().equals(MOD_ID)).isPresent())
+                    .map(RegistryEntry.Reference::value)
+                    .map(ItemStack::new).toList()))
+            .build();
 
     public static final String CONTRIBUTOR_URL = "https://raw.githubusercontent.com/AmyMialee/kofi-table/main/supporters.toml";
     public static final Map<UUID, SupporterKofiTable> CONTRIBUTORS = initContributors(MOD_ID, SupporterKofiTable.class, CONTRIBUTOR_URL);
