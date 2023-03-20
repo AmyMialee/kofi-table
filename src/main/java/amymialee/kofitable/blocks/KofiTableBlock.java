@@ -8,6 +8,7 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.registry.Registries;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
@@ -20,7 +21,6 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -41,7 +41,7 @@ public class KofiTableBlock extends Block {
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (!world.isClient()) {
             if (!player.getItemCooldownManager().isCoolingDown(KofiTableItems.KOFI_CUP)) {
-                List<StatusEffect> list = Registry.STATUS_EFFECT.stream().filter(StatusEffect::isBeneficial).toList();
+                List<StatusEffect> list = Registries.STATUS_EFFECT.stream().filter(StatusEffect::isBeneficial).toList();
                 player.addStatusEffect(new StatusEffectInstance(list.get(world.random.nextInt(list.size())), 80 * 20, 0, true, false));
                 player.getItemCooldownManager().set(KofiTableItems.KOFI_CUP, 60 * 20);
             }

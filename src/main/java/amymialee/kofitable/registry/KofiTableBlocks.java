@@ -10,9 +10,10 @@ import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.world.BlockView;
 
 import java.util.ArrayList;
@@ -24,11 +25,11 @@ public class KofiTableBlocks {
     public static void init() {}
 
     private static Block registerBlock(String name, Block block) {
-        return registerBlock(name, new BlockItem(block, new FabricItemSettings().group(KofiTable.KOFI_GROUP)));
+        return registerBlock(name, new BlockItem(block, new FabricItemSettings()));
     }
 
     private static Block registerBlock(String name, BlockItem block) {
-        Registry.register(Registry.BLOCK, KofiTable.id(name), block.getBlock());
+        Registry.register(Registries.BLOCK, KofiTable.id(name), block.getBlock());
         KofiTableItems.registerItem(name, block);
         return block.getBlock();
     }
