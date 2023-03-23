@@ -43,9 +43,9 @@ public class KofiTableBlock extends Block {
             if (!player.getItemCooldownManager().isCoolingDown(KofiTableItems.KOFI_CUP)) {
                 List<StatusEffect> list = Registries.STATUS_EFFECT.stream().filter(StatusEffect::isBeneficial).toList();
                 player.addStatusEffect(new StatusEffectInstance(list.get(world.random.nextInt(list.size())), 80 * 20, 0, true, false));
+                world.playSoundFromEntity(null, player, SoundEvents.ENTITY_WITCH_DRINK, SoundCategory.PLAYERS, 1, 1);
                 player.getItemCooldownManager().set(KofiTableItems.KOFI_CUP, 60 * 20);
             }
-            world.playSoundFromEntity(null, player, SoundEvents.ENTITY_WITCH_DRINK, SoundCategory.PLAYERS, 1, 1);
             return ActionResult.SUCCESS;
         }
         return super.onUse(state, world, pos, player, hand, hit);
