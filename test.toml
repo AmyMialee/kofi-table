@@ -49,3 +49,7 @@
 # semit
 ["9dc4840c-34ea-4437-a2f2-a43b6cc8a5f5"]
 "test:test" = "test"
+
+# zulptic
+["b2fa7e7d-32a8-473d-8ef2-d15126c9a677"]
+"test:test" = "test"
